@@ -12,7 +12,7 @@ class Config:
 
 
 app = Flask(__name__)
-app.congig.from_object(Config)
+app.config.from_object(Config)
 app.url_map.strict_slashes = False
 babel = Babel(app)
 
@@ -20,7 +20,7 @@ babel = Babel(app)
 @app.route('/')
 def index() -> str:
     """return index page"""
-    render_template('1-index.html')
+    return render_template('1-index.html')
 
 
 if __name__ == "__main__":
